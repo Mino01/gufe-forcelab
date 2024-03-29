@@ -163,8 +163,14 @@ class OpenMMSystemGeneratorFFSettings(BaseForceFieldSettings):
         "amber/tip3p_standard.xml",  # TIP3P and recommended monovalent ion parameters
         "amber/tip3p_HFE_multivalent.xml",  # for divalent ions
         "amber/phosaa10.xml",  # Handles THE TPO
+        "amber14/tip3pfb.xml",  # added 
+        "amber14/amber14-all.xml",  # added 
+        "amber14/amber14-all.xml",  # added 
     ]
     """List of force field paths for all components except :class:`SmallMoleculeComponent` """
+
+     """Support for ANI-2X force field in OpenMM""" 
+    potential = 'ani2x'
 
     small_molecule_forcefield: str = "openff-2.0.0"  # other default ideas 'openff-2.0.0', 'gaff-2.11', 'espaloma-0.2.0'
     """Name of the force field to be used for :class:`SmallMoleculeComponent` """
